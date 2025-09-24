@@ -1,0 +1,29 @@
+{
+  "name": "sb04_ocoffee-valentincolombat",
+  "version": "1.0.0",
+  "description": "## Information du projet",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Dundee/SB04_ocoffee-ValentinColombat.git"
+  },
+  "type":"module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Dundee/SB04_ocoffee-ValentinColombat/issues"
+  },
+  "homepage": "https://github.com/O-clock-Dundee/SB04_ocoffee-ValentinColombat#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

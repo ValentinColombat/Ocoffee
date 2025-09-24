@@ -1,6 +1,6 @@
 import express from 'express';
 import client from './db/client.js';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'
 dotenv.config();
 
 const app = express();
@@ -8,7 +8,10 @@ const PORT = process.env.APP_PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
 app.use(express.static('public'));
+app.use(express.urlencoded());
+app.use(express.json());
 
 app.get ('/', (req,res) => {
     res.send('Hello World !');

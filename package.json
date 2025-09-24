@@ -8,13 +8,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "node --watch app.js"
+    "dev": "node --watch app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/O-clock-Dundee/SB04_ocoffee-ValentinColombat.git"
   },
-  "type":"module",
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/O-clock-Dundee/SB04_ocoffee-ValentinColombat#readme",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
   }
 }

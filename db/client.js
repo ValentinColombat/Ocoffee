@@ -10,6 +10,5 @@ const client = new Client({
   database: process.env.DB_NAME,
 })
 
-client.connect()
 
 export default client;

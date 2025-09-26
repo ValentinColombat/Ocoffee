@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <!-- Meta -->
   <meta charset="UTF-8">
@@ -10,45 +9,33 @@
   <!-- Title -->
   <title>oCoffee</title>
 
-  <!-- Common styles -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Modern styles -->
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/home.css">
 
   <!-- Common scripts -->
   <script defer src="../js/header.js"></script>
-
-  <!-- Style -->
-  <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
-  <header>
-    <a href="#">
-      <img src="../images/logo.svg" alt="logo oCoffee">
-      oCoffee
-    </a>
-
-    <nav id="menu-navbar">
-      <button id="menu-button" aria-label="Show navigation links">
-        <?xml version="1.0" encoding="UTF-8"?><svg width="100%" height="100%" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="none"><path d="M3 5H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 19H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-      </button>
-
-      <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Catalogue</a></li>
-        <li><a href="#">Boutique</a></li>
-      </ul>
-    </nav>
-  </header>
+  <%- include('partials/header') %>
 
   <main>
     <section id="about">
       <div>
           <h1>Votre spécialiste Haucloquois du café</h1>
           <p>oCoffee est un détaillant de café et de produits associés à la consommation du café basé dans la ville de Hauts-de-Cloques. Nous importons nos produits directement des producteurs, et nous les sélectionnons selon des critères exigeants de qualité. oCoffee est reconnu à l’échelle départementale.</p>
-          <a class="button" href="#">Découvrir notre catalogue</a>
+          <a class="btn btn-primary btn-lg" href="/catalogue">
+            Découvrir notre catalogue
+          </a>
       </div>
       <img src="../images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee">
     </section>
@@ -57,44 +44,35 @@
       <h2>Nouveautés</h2>
       
       <ul>
-        <li>
-          <article>
-            <img src="../images/coffees/100955890.png" alt="Ethiopian Yirgacheffe">
-            <div>
-              <h3>Ethiopian Yirgacheffe</h3>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <img src="../images/coffees/100955890.png" alt="Ethiopian Yirgacheffe">
-            <div>
-              <h3>Ethiopian Yirgacheffe</h3>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <img src="../images/coffees/100955890.png" alt="Ethiopian Yirgacheffe">
-            <div>
-              <h3>Ethiopian Yirgacheffe</h3>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-        </li>
-
+        <% if (coffees && coffees.length > 0) { %>
+          <% coffees.forEach(coffee => { %>
+            <li>
+              <article>
+                <img src="../images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.nom %>">
+                <div>
+                  <h3><%= coffee.nom %></h3>
+                  <p class="price"><%= coffee.prix_kg %>€/kg</p>
+                  <% if (coffee.origine) { %>
+                    <p>🌍 Origine: <strong><%= coffee.origine %></strong></p>
+                  <% } %>
+                  <a class="btn btn-secondary btn-sm" href="/cafe/<%= coffee.reference %>">
+                  Voir le détail
+                  </a>
+                </div>
+              </article>
+            </li>
+          <% }); %>
+        <% } else { %>
+          <div class="no-products">
+            <p>☕ Aucune nouveauté disponible pour le moment.</p>
+          </div>
+        <% } %>
       </ul>
     </section>
 
   </main>
 
-  <footer>
-    <p>O'Clock & Pepper Brothers - Tous droits réservés</p>
-  </footer>
+  <%- include('partials/footer') %>
 
 </body>
 </html>

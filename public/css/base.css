@@ -1,22 +1,139 @@
-/* ==== Variables ==== */
+/* ==== Variables Modernes ==== */
 
 :root {
-  --color-dark: #3E1E04;
-  --color-brown: #8b5c38;
-  --color-orange: #965015;
-  --color-yellow: #C4923E;
-  --color-cream: #f7dbb9;
+  /* Couleurs principales */
+  --color-dark: #1a0f0a;
+  --color-brown: #6b4423;
+  --color-orange: #d4741a;
+  --color-yellow: #f4c430;
+  --color-cream: #faf6f0;
+  
+  /* Nouvelles couleurs modernes */
+  --color-primary: #8b4513;
+  --color-secondary: #cd853f;
+  --color-accent: #ff6b35;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  
+  /* Couleurs neutres */
+  --color-white: #ffffff;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--color-orange) 0%, var(--color-yellow) 100%);
+  --gradient-dark: linear-gradient(135deg, var(--color-dark) 0%, var(--color-brown) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  
+  /* Ombres */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(139, 69, 19, 0.3);
+  
+  /* Rayons de bordure */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease-out;
+  --transition-normal: 0.3s ease-out;
+  --transition-slow: 0.5s ease-out;
+  
+  /* Espacements */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
 }
 
 
-/* Custom reset */
+/* ==== Reset & Base Styles ==== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  transform: translateY(-1px);
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==== Utility Classes ==== */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+.hidden { display: none; }
+.block { display: block; }
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+.rounded { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+.transition { transition: var(--transition-normal); }
+.transition-fast { transition: var(--transition-fast); }

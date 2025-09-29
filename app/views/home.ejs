@@ -15,14 +15,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Modern styles -->
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/home.css">
 
   <!-- Common scripts -->
-  <script defer src="../js/header.js"></script>
+  <script defer src="/js/header.js"></script>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
             Découvrir notre catalogue
           </a>
       </div>
-      <img src="../images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee">
+      <img src="/images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee">
     </section>
 
     <section id="latest-products">
@@ -48,7 +48,7 @@
           <% coffees.forEach(coffee => { %>
             <li>
               <article>
-                <img src="../images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.nom %>">
+                <img src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.nom %>">
                 <div>
                   <h3><%= coffee.nom %></h3>
                   <p class="price"><%= coffee.prix_kg %>€/kg</p>

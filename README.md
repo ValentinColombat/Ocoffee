@@ -1,11 +1,11 @@
 # Projet oCoffee - Documentation conceptuelle
 
-## 🎯 Présentation du projet
+##  Présentation du projet
 
 **oCoffee** est un site dédié à la vente de café premium, développée pour l'entreprise familiale des frères Pepper située à Hauts-de-Cloques. Cette boutique en ligne met l'accent sur la qualité et la traçabilité des produits, 
 avec une sélection rigoureuse de cafés importés directement des producteurs.
 
-## 🏢 Contexte métier
+## Contexte métier
 
 ### Vision de l'entreprise
 - **Spécialisation locale** : Détaillant reconnu à l'échelle départementale
@@ -16,7 +16,7 @@ avec une sélection rigoureuse de cafés importés directement des producteurs.
 ### Positionnement marché
 oCoffee se positionne comme le spécialiste haucloquois du café haut de gamme, alliant tradition familiale et modernité digitale.
 
-## 🚀 Fonctionnalités principales
+## Fonctionnalités principales
 
 ### 1. Vitrine produits
 - **Catalogue complet** : Présentation de tous les cafés disponibles
@@ -35,7 +35,7 @@ oCoffee se positionne comme le spécialiste haucloquois du café haut de gamme, 
 - **Références uniques** : Système de codification des cafés (ex: ESP001, ARA002)
 - **Informations complètes** : Origine, prix, descriptions, images
 
-## 🎨 Identité visuelle
+##  Identité visuelle
 
 ### Charte graphique
 - **Typographie** : Police Inter (Google Fonts) pour une lisibilité optimale
@@ -48,7 +48,7 @@ oCoffee se positionne comme le spécialiste haucloquois du café haut de gamme, 
 - **Confiance** : Transparence sur l'origine et la qualité des produits
 - **Proximité** : Ancrage local fort (Hauts-de-Cloques)
 
-## 🛠️ Architecture technique
+##  Architecture technique
 
 ### Stack technologique
 - **Backend** : Node.js avec Express.js pour la robustesse et la performance
@@ -62,7 +62,7 @@ oCoffee se positionne comme le spécialiste haucloquois du café haut de gamme, 
 - **Sécurité** : Configuration sécurisée des environnements
 - **Maintenance** : Code structuré et documenté
 
-## 🎯 Public cible
+##  Public cible
 
 ### Profils utilisateurs
 - **Amateurs de café** : Consommateurs exigeants recherchant la qualité
@@ -76,8 +76,9 @@ oCoffee se positionne comme le spécialiste haucloquois du café haut de gamme, 
 - **Expertise** : Conseils et informations détaillées
 - **Proximité** : Service local et personnalisé
 
-## 📈 Indicateurs de succès
+## Indicateurs de succès
 
 ### Métriques techniques
 - Temps de chargement < 3 secondes
 - Compatibilité 100% mobile
+
